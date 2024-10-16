@@ -3,6 +3,18 @@
     font-size: 24px;
 }
 
+/* variables */
+:root {
+    --TipoTitles:"Montserrat", sans-serif;
+    --darkBack: rgb(0, 24, 1);
+    --lightText: rgb(247, 234, 241);
+    --tierra: rgb(218, 192, 165);
+    --bosque:rgb(89, 86, 27);
+    --agua: rgb(127, 142, 139);
+    --gap: 6vw;
+    --b: rgb()
+}
+
 .my-bg-color {
     background-color: white;
 }
