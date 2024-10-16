@@ -91,3 +91,19 @@ button {
     min-width: 150px; /* Establece un tamaño mínimo */
     opacity: 100;
 }
+
+/* CARROUSEL MODELOS*/
+.horizontal-carousel h2 {
+    margin-bottom: 30px;
+}
+
+.swiper-slide img {
+    /* width: 100%;
+    height: auto; */
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+/* .swiper-slide {
+    aspect-ratio: 4/3;
+} */

@@ -70,3 +70,39 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.removeChild(link);
     });
   });
+
+
+  // CARROUSEL HORIZONTAL
+document.addEventListener('DOMContentLoaded', function() {
+    // Inicialización del carrusel Swiper
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3, // Número de slides visibles
+        spaceBetween: 30, // Espacio entre slides (en píxeles)
+        slidesPerGroup: 3, // Número de slides que se moverán en cada navegación
+        loop: true, // Habilita el loop
+        loopFillGroupWithBlank: true, // Rellena el grupo con slides en blanco si es necesario
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            // Ajustes responsivos
+            320: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+            },
+            640: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+            },
+        },
+    });
+  });
