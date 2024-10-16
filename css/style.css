@@ -5,18 +5,66 @@
 
 /* variables */
 :root {
-    --TipoTitles:"Montserrat", sans-serif;
-    --darkBack: rgb(0, 24, 1);
-    --lightText: rgb(247, 234, 241);
-    --tierra: rgb(218, 192, 165);
-    --bosque:rgb(89, 86, 27);
-    --agua: rgb(127, 142, 139);
-    --gap: 6vw;
-    --b: rgb()
+    --primaryPink: #FADADE;
+    --primaryRed: #B72D37;
+    --secondaryPink: #98414D;
+    --secondaryRed:#4E1317;
+    --black: #222223;
+    --white: #F8F8F8;
+    --darkGrey: #757578;
+    --lightGrey: #D2D2D7;
 }
-
+h1 {
+    font-weight: 900;
+    font-size: 6vw;
+    text-transform: uppercase;  
+    letter-spacing: 0.35em;
+}
+h2 {
+    font-weight: 900;
+    font-size: 3vw;
+    text-transform: uppercase;  
+    letter-spacing: 0.3em;
+}
+h3 {
+    font-weight: 100;
+    font-style: italic;
+    font-size: 2vw;
+    text-transform: uppercase;  
+    letter-spacing: 0.3em;
+}
+h4 {
+    font-weight: 900;
+    font-style: italic;
+    font-size: 24px;
+    text-transform: uppercase;  
+    letter-spacing: 0.15em;
+    color: var(--primaryRed);
+}
+h5 {
+    font-weight: 100;
+    font-style: italic;
+    font-size: 24px;
+    text-transform: uppercase;  
+    letter-spacing: 0.15em;
+}
+p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.8em;
+}
+button {
+    border: 2px solid;
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: 300;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 8px 24px;
+}
 .my-bg-color {
-    background-color: white;
+    background-color: var(--white);
 }
 .hr-menu {
     width: 100%; /* Asegura que ocupe todo el ancho posible del li */
