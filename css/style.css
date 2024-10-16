@@ -4,18 +4,14 @@
 }
 
 .my-bg-color {
-    background-color: pink;
+    background-color: white;
 }
 .hr-menu {
     width: 100%; /* Asegura que ocupe todo el ancho posible del li */
-    height: 5px; /* Grosor del hr */
+    height: 0px; /* Grosor del hr */
     margin: 0; /* Quita margen adicional */
-    background-color: #ffffff; /* Color del hr, puedes ajustarlo */
+    border: solid black 1px;
+    color: black;
     min-width: 150px; /* Establece un tamaño mínimo */
-}
-
-.hr-container {
-    display: flex; /* Permite que el contenido del li se ajuste */
-    justify-content: center; /* Centra el hr dentro del li */
-    align-items: center;
+    opacity: 100;
 }
