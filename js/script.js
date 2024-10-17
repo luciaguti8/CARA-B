@@ -106,3 +106,43 @@ document.addEventListener('DOMContentLoaded', function() {
         },
     });
   });
+
+  //   CARROUSEL CARDS 
+document.addEventListener('DOMContentLoaded', function() {
+    // Inicialización del carrusel Swiper
+    var swiper = new Swiper(".myHorizontalSwiper", {
+        slidesPerView: 4, // Número de slides visibles
+        spaceBetween: 30, // Espacio entre slides (en píxeles)
+        mousewheel: {
+            invert: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        // Opcional: Activar navegación con botones
+        // navigation: {
+        //     nextEl: ".swiper-button-next",
+        //     prevEl: ".swiper-button-prev",
+        // },
+        breakpoints: {
+            // Ajustes responsivos
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 15,
+            },
+            // 768: {
+            //     slidesPerView: 3,
+            //     spaceBetween: 20,
+            // },
+            // 992: {
+            //     slidesPerView: 4,
+            //     spaceBetween: 30,
+            // },
+        },
+    });
+});

@@ -107,3 +107,23 @@ button {
 /* .swiper-slide {
     aspect-ratio: 4/3;
 } */
+
+/* CARROUSEL CARDS */
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-slide .card {
+    width: 100%;
+    max-width: 34vw; 
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+}
