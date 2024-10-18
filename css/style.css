@@ -1,5 +1,6 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--white);
 }
 
 /* variables */
@@ -15,9 +16,11 @@
 }
 h1 {
     font-weight: 900;
-    font-size: 6vw;
+    font-size: 8vw;
     text-transform: uppercase;  
     letter-spacing: 0.35em;
+    text-align: center;
+    padding-bottom: 2vw;
 }
 h2 {
     font-weight: 900;
@@ -39,6 +42,8 @@ h4 {
     text-transform: uppercase;  
     letter-spacing: 0.15em;
     color: var(--primaryRed);
+    text-align: center;
+    padding-top: 2vw;
 }
 h5 {
     font-weight: 100;
@@ -46,6 +51,7 @@ h5 {
     font-size: 24px;
     text-transform: uppercase;  
     letter-spacing: 0.15em;
+    text-align: center;
 }
 p {
     font-weight: 400;
@@ -91,6 +97,25 @@ button {
     min-width: 150px; /* Establece un tamaño mínimo */
     opacity: 100;
 }
+.container-fluid {
+    gap: 16px;
+    padding: 0.2vw 4vw;
+}
+/* INDEX */
+section {
+    padding: 2vw 16vw;
+}
+#intro {
+    padding-top: 4vw;
+}
+#intro img, #team img{
+    aspect-ratio: 16/9;
+    width: 100%;
+    object-fit: cover;
+    padding-bottom: 4vw;
+}
+
+
 
 /* CARROUSEL MODELOS*/
 .horizontal-carousel h2 {

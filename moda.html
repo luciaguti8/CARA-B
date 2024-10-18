@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARA-B | La industria de la moda</title>
+        <!-- Swiper CSS CARROUSEL HORIZONTAL-->
+        <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper@9/swiper-bundle.min.css">
+
+         <!-- Fabric.js POSTER-->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.2.4/fabric.min.js" integrity="sha512-LTTG3Vu8eU8L9G2I5eRPPs3EXkSL8tKJ1zKgTdDQO+EVUrC02BApK1IktZndVg+Zr8R+EYFVt0bKzLxXHIoFAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- BOOTSTRAP -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+        <!-- JQUERY  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- Para que funcione nuestro CSS tenemos que cargarlo despues de enlazar el link de Bootstrap -->
+        <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg my-bg-color">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">CARA-B</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <hr class="hr-menu">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Números</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+       <!-- CARROUSEL SITUACIÓN DE LAS MODELOS-->
+       <section class="horizontal-carousel p-4">
+        <div class="container py-4">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="media/CA_Carrousel/CA1.jpg" class="img-fluid" alt="Foto 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="media/CA_Carrousel/CA2.jpg" class="img-fluid" alt="Foto 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="media/CA_Carrousel/CA3.jpg" class="img-fluid" alt="Foto 3">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="media/CA_Carrousel/CA4.jpg" class="img-fluid" alt="Foto 4">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="media/CA_Carrousel/CA5.jpg" class="img-fluid" alt="Foto 5">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="media/CA_Carrousel/CA6.jpg" class="img-fluid" alt="Foto 6">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="media/CA_Carrousel/CA7.jpg" class="img-fluid" alt="Foto 7">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="media/CA_Carrousel/CA8.jpg" class="img-fluid" alt="Foto 8">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="media/CA_Carrousel/CA9.jpg" class="img-fluid" alt="Foto 9">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="media/CA_Carrousel/CA10.jpg" class="img-fluid" alt="Foto 10">
+                    </div>
+                </div>
+                <!-- Navegación -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- Paginación -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARROUSEL CASOS HISTORICOS -->
+    <section class="horizontal-carousel2 p-4">
+        <div class="container py-4">
+            <!-- Swiper -->
+            <div class="swiper myHorizontalSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="media/CH_Carrousel/CH1.jpg" class="card-img-top" alt="Producto 1">
+                            <div class="card-body">
+                                <h5 class="card-title">El Desastre de la Fábrica Triangle Shirtwaist (1911)</h5>
+                                <p class="card-text">El incendio en la fábrica Triangle Shirtwaist en Nueva York fue una tragedia que expuso las condiciones inhumanas y peligrosas en las que trabajaban cientos de mujeres inmigrantes. La falta de medidas de seguridad básica mostró la negligencia de los dueños y gerentes, lo que impulsó un movimiento de reforma laboral en Estados Unidos. Este suceso condujo a nuevas leyes para proteger a los trabajadores y se convirtió en un símbolo de la lucha por los derechos laborales y la justicia social.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="media/CH_Carrousel/CH2.jpg" class="card-img-top" alt="Producto 2">
+                            <div class="card-body">
+                                <h5 class="card-title">El Colapso del Rana Plaza (2013):</h5>
+                                <p class="card-text">El colapso del Rana Plaza en 2013, en Bangladesh, dejó más de 1,100 muertos y miles de heridos, revelando las condiciones laborales inhumanas en la industria textil global. La falta de seguridad y los bajos salarios de los trabajadores fueron expuestos, generando indignación mundial. Este desastre impulsó llamados urgentes para mejorar los derechos y la seguridad de los trabajadores en la industria de la moda a nivel global, convirtiéndose en un recordatorio de las injusticias y la explotación sistemática en este sector.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="media/CH_Carrousel/CH3.jpg" class="card-img-top" alt="Producto 3">
+                            <div class="card-body">
+                                <h5 class="card-title">El caso de Christian Dior y Balmain (1947):</h5>
+                                <p class="card-text">El caso de Christian Dior y Balmain en 1947 reveló un escándalo de plagio en la alta costura, cuando muchos diseños del "New Look" de Dior resultaron ser copias de creaciones previas de Balmain. Este incidente expuso la falta de originalidad en la moda de lujo y planteó cuestiones éticas sobre la imitación en el diseño. Además, generó un debate sobre la importancia de la propiedad intelectual y la autenticidad, subrayando que, incluso en la alta costura, el respeto por la creatividad es esencial.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="media/CH_Carrousel/CH4.jpg" class="card-img-top" alt="Producto 4">
+                            <div class="card-body">
+                                <h5 class="card-title">La lucha de Gucci contra la imitación (años 2000):</h5>
+                                <p class="card-text">La lucha de Gucci contra la falsificación en los años 2000 destacó los retos constantes de proteger la creatividad en la moda. Como marca icónica, Gucci ha liderado batallas legales para defender su propiedad intelectual frente a productos falsificados, subrayando el impacto económico y reputacional de estas prácticas. Este caso resalta la necesidad de reforzar los derechos de propiedad intelectual y preservar la autenticidad en la industria, reflejando el compromiso de Gucci y del sector en salvaguardar el valor de la creatividad frente a la imitación.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Paginación -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+       <!-- POSTER -->
+       <section class="custom-poster p-4">
+        <div class="container py-4">
+            <h2 class="mb-4">Crea tu Póster Personalizado</h2>
+            <div class="row">
+                <div class="col-md-8">
+                    <canvas id="posterCanvas" width="800" height="600" style="border:1px solid #ccc;"></canvas>
+                </div>
+                <div class="col-md-4">
+                    <h4>Agregar Objetos</h4>
+                    <button id="addText" class="btn btn-primary mb-2">Agregar Texto</button>
+                    <button id="addImage" class="btn btn-secondary mb-2">Agregar Imagen</button>
+                    <button id="savePoster" class="btn btn-success mb-2">Guardar Póster</button>
+                    <input type="file" id="imageLoader" name="imageLoader" accept="image/*" style="display:none;" />
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Swiper JS CARROUSEL HORIZONTAL -->
+    <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+    
+    <!-- JAVASCRIPT BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/script.js"></script>
+</body>
+</html>
