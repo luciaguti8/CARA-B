@@ -1,14 +1,16 @@
 // INDEX
-var typed = new Typed('#quote-intro', {
-    strings: ['Prepárate para ver el mundo con nuevos ojos...', 'Prepárate para descubrir su "CARA B".'],
-    typeSpeed: 50,
-    loop: true,
-});
-var typed = new Typed('#quote-team', {
-    strings: ['"CARA B" se compromete a abrir los ojos del mundo...', 'Y mostrar la verdad incómoda que yace debajo de la superficie de nuestro día a día.'],
-    typeSpeed: 50,
-    loop: true,
-});
+if (document.querySelector('#quote-intro') && document.querySelector('#quote-team')) {
+    var typed = new Typed('#quote-intro', {
+        strings: ['Prepárate para ver el mundo con nuevos ojos...', 'Prepárate para descubrir su "CARA B".'],
+        typeSpeed: 50,
+        loop: true,
+    });
+    var typed = new Typed('#quote-team', {
+        strings: ['"CARA B" se compromete a abrir los ojos del mundo...', 'Y mostrar la verdad incómoda que yace debajo de la superficie de nuestro día a día.'],
+        typeSpeed: 50,
+        loop: true,
+    });
+};
 
 // POSTER 
 // Espera a que el documento esté completamente cargado

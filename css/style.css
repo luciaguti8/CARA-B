@@ -1,6 +1,6 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--white);
+    margin: 0;
 }
 
 /* variables */
@@ -103,7 +103,9 @@ button {
 }
 /* INDEX */
 section {
-    padding: 2vw 16vw;
+    padding: 2vw 16vw !important;
+    background-color: var(--white);
+    width: 100vw;
 }
 #intro {
     padding-top: 4vw;
