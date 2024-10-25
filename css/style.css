@@ -116,8 +116,10 @@ section {
     object-fit: cover;
     padding-bottom: 4vw;
 }
-
-
+.quotes {
+    height: 60px;
+    display: flex;
+}
 
 /* CARROUSEL MODELOS*/
 .horizontal-carousel h2 {
