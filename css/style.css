@@ -285,7 +285,6 @@ footer ul {
 
 
 /* CARROUSEL CARDS */
-
 .swiper-slide {
     display: flex;
     justify-content: center;
@@ -302,4 +301,18 @@ footer ul {
     width: 100%;
     height: auto;
     border-radius: 0;
+}
+
+/* GALERÍA MALTRATADORES BOOTSTRAP */
+.gallery-image {
+    width: 100%; 
+    aspect-ratio: 3 / 4; 
+    object-fit: cover; 
+    border-radius: 0; 
+}
+
+.caption {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 8px;
 }
