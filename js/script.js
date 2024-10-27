@@ -70,22 +70,39 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   
     // Guardar el póster como imagen
-    document.getElementById('savePoster').addEventListener('click', function() {
-        const dataURL = canvas.toDataURL({
-            format: 'png',
-            quality: 0.8
+document.getElementById('savePoster').addEventListener('click', function() {
+    const dataURL = canvas.toDataURL({
+        format: 'png',
+        quality: 0.8
         });
-        // Crear un enlace para descargar la imagen
-        const link = document.createElement('a');
-        link.href = dataURL;
-        link.download = 'mi-poster.png';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+       // Crear un enlace para descargar la imagen
+    const link = document.createElement('a');
+    link.href = dataURL;
+    link.download = 'mi-poster.png';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
     });
   });
 
+// HOVER CAMERON RUSSEL
+document.querySelectorAll('.gallery-item').forEach((item) => {
+    const hoverImage = item.querySelector('.hover-image');
 
+    // Evento de movimiento del ratón
+    item.addEventListener('mousemove', (event) => {
+        const { offsetX, offsetY } = event;
+        const radius = 80; // Ajusta el radio según prefieras
+
+        // Cambiar el clip-path para crear el efecto de máscara
+        hoverImage.style.clipPath = `circle(${radius}px at ${offsetX}px ${offsetY}px)`;
+    });
+
+    // Cuando el ratón sale, ocultar la máscara
+    item.addEventListener('mouseleave', () => {
+        hoverImage.style.clipPath = 'circle(0% at 50% 50%)';
+    });
+});
   // CARROUSEL HORIZONTAL
 document.addEventListener('DOMContentLoaded', function() {
     // Inicialización del carrusel Swiper
