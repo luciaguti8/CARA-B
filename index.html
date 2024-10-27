@@ -13,13 +13,14 @@
     <!-- JQUERY  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- TYPED -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     
     <!-- Para que funcione nuestro CSS tenemos que cargarlo despues de enlazar el link de Bootstrap -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg my-bg-color">
+    <nav class="navbar navbar-expand-lg my-bg-color fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">CARA-B</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,13 +30,13 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link active" aria-current="page" href="#intro">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Nosotros</a>
+                    <a class="nav-link active" href="#team">Nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Números</a>
+                    <a class="nav-link active" href="#issues">Números</a>
                 </li>
             </ul>
           </div>
@@ -61,11 +62,32 @@
             </h4>
         </div>
     </section>
+    <section id="issues">
+        <h1>Números</h1>
+
+    </section>
     <footer>
         <div class="container-fluid">
-            <div class="row g-4 d-flex align-items-center">
-                <div class="col-md-12 d-flex justify-content-center">
+            <div class="row g-5 d-flex align-items-center">
+                <!-- <div class="col-md-12 d-flex justify-content-center">
                     <h2>Cara-B</h2>
+                </div> -->
+                <div class="marquee col-md-12 d-flex justify-content-center">
+                    <ul class="marquee__content">
+                      <li><h2>Cara-B</h2></li>
+                      <li><h2>Cara-B</h2></li>
+                      <li><h2>Cara-B</h2></li>
+                      <li><h2>Cara-B</h2></li>
+                      <li><h2>Cara-B</h2></li>
+                    </ul>
+                    <!-- Mirrors the content above -->
+                    <ul class="marquee__content" aria-hidden="true">
+                      <li><h2>Cara-B</h2></li>
+                      <li><h2>Cara-B</h2></li>
+                      <li><h2>Cara-B</h2></li>
+                      <li><h2>Cara-B</h2></li>
+                      <li><h2>Cara-B</h2></li>
+                    </ul>
                 </div>
                 <div class="col-md-6 d-flex justify-content-end">
                     <h3 class="text-center">Suscríbete a nuestra newsletter</h3>

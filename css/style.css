@@ -89,7 +89,6 @@ button {
 .nav-item:hover {
     color: var(--primaryRed);
 }
-
 .my-bg-color {
     background-color: var(--white);
 }
@@ -101,7 +100,7 @@ button {
     min-width: 150px; /* Establece un tamaño mínimo */
     opacity: 100;
 }
-.container-fluid {
+ nav .container-fluid {
     gap: 16px;
     padding: 0.2vw 4vw;
 }
@@ -112,7 +111,7 @@ section {
     width: 100vw;
 }
 #intro {
-    padding-top: 4vw;
+    padding-top: 5vw !important;
 }
 #intro img, #team img{
     aspect-ratio: 16/9;
@@ -127,7 +126,13 @@ section {
 }
 footer {
     background-color: var(--primaryRed);
-    padding: 2vw 4vw !important;
+    padding: 2vw 0vw !important;
+}
+footer .container-fluid {
+    padding: 0;
+}
+footer p {
+    padding: 0vw 6vw;
 }
 footer form, footer h3 {
     width: 60%;
@@ -156,7 +161,44 @@ footer button:hover {
 .socials {
     gap: 16px;
 }
+footer h3, footer p, footer .fa-brands{
+    color: var(--white);
+}
 
+/* marquee */
+footer h2 {
+    color: var(--primaryPink);
+}
+footer ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.marquee {
+    --gap: 1vw;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+  }
+  .marquee__content {
+    animation: scroll 8s linear infinite;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: var(--gap);
+  }
+  .marquee__content:nth-child(2){
+    margin-right: -100%; 
+  }
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
 
 /* CARROUSEL MODELOS*/
 .horizontal-carousel h2 {
