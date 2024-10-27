@@ -124,6 +124,32 @@ section {
     display: flex;
     justify-content: center;
 }
+
+/* CARROUSEL EJEMPLARES CON BOOTSTRAP */
+.carousel-item img {
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s;
+    width: 100%;
+    height: auto;
+}
+
+.carousel-item img:hover {
+    transform: scale(1.05);
+}
+
+.modal-content {
+    border-radius: 0; 
+    height: 100%;
+}
+
+.modal img {
+    width: 100%;
+    /* max-height: 80vh; */
+    object-fit: contain;
+}
+
+/* FOOTER  */
 footer {
     background-color: var(--primaryRed);
     padding: 2vw 0vw !important;

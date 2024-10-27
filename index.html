@@ -66,6 +66,53 @@
         <h1>Números</h1>
 
     </section>
+
+    <!-- CARROUSEL DE EJEMPLARES; BOOTSTRAP-->
+    <section id="customCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="media/CE_Carrousel/PE_Mockups/Ejemplar1.jpg" class="d-block w-100" alt="Imagen 1" onclick="openModal('media/CE_Carrousel/PE_Plano/Portada1.jpg')">
+            </div>
+            <div class="carousel-item">
+                <img src="media/CE_Carrousel/PE_Mockups/Ejemplar2.jpg" class="d-block w-100" alt="Imagen 2" onclick="openModal('media/CE_Carrousel/PE_Plano/Portada2.jpg')">
+            </div>
+            <div class="carousel-item">
+                <img src="media/CE_Carrousel/PE_Mockups/Ejemplar3.jpg" class="d-block w-100" alt="Imagen 2" onclick="openModal('media/CE_Carrousel/PE_Plano/Portada3.jpg')">
+            </div>
+            <div class="carousel-item">
+                <img src="media/CE_Carrousel/PE_Mockups/Ejemplar4.jpg" class="d-block w-100" alt="Imagen 4" onclick="openModal('media/CE_Carrousel/PE_Plano/Portada4.jpg')">
+            </div>
+
+            <div class="carousel-item">
+                <img src="media/CE_Carrousel/PE_Mockups/Ejemplar5.jpg" class="d-block w-100" alt="Imagen 5" onclick="openModal('media/CE_Carrousel/PE_Plano/Portada5.jpg')">
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#customCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </section>
+
+    <!-- MODAL DEL CARROUSEL -->
+    <section class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalImage" src="" alt="Imagen ampliada">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <footer>
         <div class="container-fluid">
             <div class="row g-5 d-flex align-items-center">

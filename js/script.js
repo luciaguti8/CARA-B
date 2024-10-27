@@ -12,6 +12,13 @@ if (document.querySelector('#quote-intro') && document.querySelector('#quote-tea
     });
 };
 
+// CARROUSEL EJEMPLARES
+function openModal(imageUrl) {
+    document.getElementById('modalImage').src = imageUrl;
+    var imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+    imageModal.show();
+}
+
 // POSTER 
 // Espera a que el documento esté completamente cargado
 document.addEventListener('DOMContentLoaded', function() {
