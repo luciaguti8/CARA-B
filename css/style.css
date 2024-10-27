@@ -153,6 +153,7 @@ section {
 footer {
     background-color: var(--primaryRed);
     padding: 2vw 0vw !important;
+    overflow: hidden;
 }
 footer .container-fluid {
     padding: 0;
@@ -247,6 +248,9 @@ footer ul {
 }
 #modelos .container {
     --bs-gutter-x: 0;
+}
+#modelos {
+    padding-top: 5vw !important;
 }
 /* .swiper-slide {
     aspect-ratio: 4/3;
