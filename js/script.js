@@ -51,14 +51,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inicializar el canvas de Fabric.js
     const canvas = new fabric.Canvas('posterCanvas');
     // Crea un rectángulo y agrégalo al lienzo
-    const rect = new fabric.Rect({
-        left: 100,
-        top: 100,
-        fill: "blue",
-        width: 60,
-        height: 70,
-    });
-    canvas.add(rect);
+    // const rect = new fabric.Rect({
+    //     left: 100,
+    //     top: 100,
+    //     fill: "blue",
+    //     width: 60,
+    //     height: 70,
+    // });
+    // canvas.add(rect);
   
     // Cargar una imagen de fondo
     fabric.Image.fromURL('./media/Poster/Fondo.jpg', function(img) {
@@ -88,8 +88,8 @@ document.addEventListener('DOMContentLoaded', function() {
         img.set({
             left: i * 100,   // Aumenta la posición horizontal para cada imagen
             top: 50,         // Posición vertical (puedes cambiarla según necesites)
-            scaleX: 0.05,     // Escala en el eje X (para hacer la imagen más pequeña)
-            scaleY: 0.05      // Escala en el eje Y
+            scaleX: 0.2,     // Escala en el eje X (para hacer la imagen más pequeña)
+            scaleY: 0.2      // Escala en el eje Y
         });
         // Agrega la imagen al canvas
         canvas.add(img);
@@ -109,18 +109,19 @@ document.addEventListener('DOMContentLoaded', function() {
         canvas.add(img);
     });
   
-    // // Agregar texto al canvas
-    // document.getElementById('addText').addEventListener('click', function() {
-    //     const text = new fabric.IText('Texto editable', {
-    //         left: 100,
-    //         top: 100,
-    //         fontFamily: 'Arial',
-    //         fill: '#000000',
-    //         fontSize: 24
-    //     });
-    //     canvas.add(text);
-    //     canvas.setActiveObject(text);
-    // });
+    // Agregar texto al canvas
+    document.getElementById('addText').addEventListener('click', function() {
+        const text = new fabric.IText('Texto editable', {
+            left: 100,
+            top: 100,
+            fontFamily: 'Arial',
+            fontWeight: '900',
+            fill: '#FADADE',
+            fontSize: 24
+        });
+        canvas.add(text);
+        canvas.setActiveObject(text);
+    });
   
     // // Agregar imagen al canvas
     // document.getElementById('addImage').addEventListener('click', function() {
@@ -223,86 +224,109 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   //CHANGEIMAGE
-$("#image1").hover(
-    function() {
-        $(this).attr("src", "media/GDE_MaltratadoresHover/AlexanderWangHover.JPG");
-    },
-    function() {
-        $(this).attr("src", "media/GDE_Maltratadores/AlexanderWang.jpg");
-    }
-    );
+// $("#image1").hover(
+//     function() {
+//         $(this).attr("src", "media/GDE_MaltratadoresHover/AlexanderWangHover.JPG");
+//     },
+//     function() {
+//         $(this).attr("src", "media/GDE_Maltratadores/AlexanderWang.jpg");
+//     }
+//     );
 
-  $("#image2").hover(
-    function() {
-        $(this).attr("src", "media/GDE_MaltratadoresHover/BruceWeberHover.JPG");
-    },
-    function() {
-        $(this).attr("src", "media/GDE_Maltratadores/BruceWeber.jpg");
-    }
-    );
+//   $("#image2").hover(
+//     function() {
+//         $(this).attr("src", "media/GDE_MaltratadoresHover/BruceWeberHover.JPG");
+//     },
+//     function() {
+//         $(this).attr("src", "media/GDE_Maltratadores/BruceWeber.jpg");
+//     }
+//     );
 
-  $("#image3").hover(
-    function() {
-        $(this).attr("src", "media/GDE_MaltratadoresHover/DavidHamiltonHover.JPG");
-    },
-    function() {
-        $(this).attr("src", "media/GDE_Maltratadores/DavidHamilton.jpg");
-    }
-    );
+//   $("#image3").hover(
+//     function() {
+//         $(this).attr("src", "media/GDE_MaltratadoresHover/DavidHamiltonHover.JPG");
+//     },
+//     function() {
+//         $(this).attr("src", "media/GDE_Maltratadores/DavidHamilton.jpg");
+//     }
+//     );
 
-  $("#image4").hover(
-    function() {
-        $(this).attr("src", "media/GDE_MaltratadoresHover/JeanLucBrunelHover.JPG");
-    },
-    function() {
-        $(this).attr("src", "media/GDE_Maltratadores/JeanLucBrunel.jpg");
-    }
-    );
+//   $("#image4").hover(
+//     function() {
+//         $(this).attr("src", "media/GDE_MaltratadoresHover/JeanLucBrunelHover.JPG");
+//     },
+//     function() {
+//         $(this).attr("src", "media/GDE_Maltratadores/JeanLucBrunel.jpg");
+//     }
+//     );
   
-  $("#image5").hover(
-    function() {
-        $(this).attr("src", "media/GDE_MaltratadoresHover/JohnGallianoHover.JPG");
-    },
-    function() {
-        $(this).attr("src", "media/GDE_Maltratadores/JohnGalliano.jpg");
-    }
-    );
+//   $("#image5").hover(
+//     function() {
+//         $(this).attr("src", "media/GDE_MaltratadoresHover/JohnGallianoHover.JPG");
+//     },
+//     function() {
+//         $(this).attr("src", "media/GDE_Maltratadores/JohnGalliano.jpg");
+//     }
+//     );
   
-  $("#image6").hover(
-    function() {
-        $(this).attr("src", "media/GDE_MaltratadoresHover/KarlLagerfeldHover.JPG");
-    },
-    function() {
-        $(this).attr("src", "media/GDE_Maltratadores/KarlLagerfeld.jpg");
-    }
-    );
+//   $("#image6").hover(
+//     function() {
+//         $(this).attr("src", "media/GDE_MaltratadoresHover/KarlLagerfeldHover.JPG");
+//     },
+//     function() {
+//         $(this).attr("src", "media/GDE_Maltratadores/KarlLagerfeld.jpg");
+//     }
+//     );
 
-  $("#image7").hover(
-    function() {
-        $(this).attr("src", "media/GDE_MaltratadoresHover/MarioTestinoHover.JPG");
-    },
-    function() {
-        $(this).attr("src", "media/GDE_Maltratadores/MarioTestino.jpg");
-    }
-    );
+//   $("#image7").hover(
+//     function() {
+//         $(this).attr("src", "media/GDE_MaltratadoresHover/MarioTestinoHover.JPG");
+//     },
+//     function() {
+//         $(this).attr("src", "media/GDE_Maltratadores/MarioTestino.jpg");
+//     }
+//     );
 
-  $("#image8").hover(
-    function() {
-        $(this).attr("src", "media/GDE_MaltratadoresHover/PatrickDemarcheliesHover.JPG");
-    },
-    function() {
-        $(this).attr("src", "media/GDE_Maltratadores/PatrickDemarchelier.jpg");
-    }
-    );
+//   $("#image8").hover(
+//     function() {
+//         $(this).attr("src", "media/GDE_MaltratadoresHover/PatrickDemarcheliesHover.JPG");
+//     },
+//     function() {
+//         $(this).attr("src", "media/GDE_Maltratadores/PatrickDemarchelier.jpg");
+//     }
+//     );
 
-  $("#image9").hover(
-    function() {
-        $(this).attr("src", "media/GDE_MaltratadoresHover/TerryRichardsonHover.JPG");
-    },
-    function() {
-        $(this).attr("src", "media/GDE_Maltratadores/TerryRichardson.jpg");
-    }
+//   $("#image9").hover(
+//     function() {
+//         $(this).attr("src", "media/GDE_MaltratadoresHover/TerryRichardsonHover.JPG");
+//     },
+//     function() {
+//         $(this).attr("src", "media/GDE_Maltratadores/TerryRichardson.jpg");
+//     }
+//     );
+
+const images = [
+    { id: "#image1", hover: "AlexanderWang", },
+    { id: "#image2", hover: "BruceWeber", },
+    { id: "#image3", hover: "DavidHamilton", },
+    { id: "#image4", hover: "JeanLucBrunel", },
+    { id: "#image5", hover: "JohnGalliano", },
+    { id: "#image6", hover: "KarlLagerfeld", },
+    { id: "#image7", hover: "MarioTestino", },
+    { id: "#image8", hover: "PatrickDemarchelier", },
+    { id: "#image9", hover: "TerryRichardson", },
+];
+
+images.forEach(image => {
+    $(image.id).hover(
+        function() {
+            $(this).attr("src", `media/GDE_MaltratadoresHover/${image.hover}Hover.JPG`);
+        },
+        function() {
+            $(this).attr("src", `media/GDE_Maltratadores/${image.hover}.jpg`);
+        }
     );
+});
 
   //   CARROUSEL CARDS 
 document.addEventListener('DOMContentLoaded', function() {
