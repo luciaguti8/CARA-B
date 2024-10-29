@@ -186,6 +186,7 @@ document.querySelectorAll('.gallery-item').forEach((item) => {
         hoverImage.style.clipPath = 'circle(0% at 50% 50%)';
     });
 });
+
   // CARROUSEL HORIZONTAL
 document.addEventListener('DOMContentLoaded', function() {
     // Inicialización del carrusel Swiper
@@ -220,6 +221,88 @@ document.addEventListener('DOMContentLoaded', function() {
         },
     });
   });
+
+  //CHANGEIMAGE
+$("#image1").hover(
+    function() {
+        $(this).attr("src", "media/GDE_MaltratadoresHover/AlexanderWangHover.JPG");
+    },
+    function() {
+        $(this).attr("src", "media/GDE_Maltratadores/AlexanderWang.jpg");
+    }
+    );
+
+  $("#image2").hover(
+    function() {
+        $(this).attr("src", "media/GDE_MaltratadoresHover/BruceWeberHover.JPG");
+    },
+    function() {
+        $(this).attr("src", "media/GDE_Maltratadores/BruceWeber.jpg");
+    }
+    );
+
+  $("#image3").hover(
+    function() {
+        $(this).attr("src", "media/GDE_MaltratadoresHover/DavidHamiltonHover.JPG");
+    },
+    function() {
+        $(this).attr("src", "media/GDE_Maltratadores/DavidHamilton.jpg");
+    }
+    );
+
+  $("#image4").hover(
+    function() {
+        $(this).attr("src", "media/GDE_MaltratadoresHover/JeanLucBrunelHover.JPG");
+    },
+    function() {
+        $(this).attr("src", "media/GDE_Maltratadores/JeanLucBrunel.jpg");
+    }
+    );
+  
+  $("#image5").hover(
+    function() {
+        $(this).attr("src", "media/GDE_MaltratadoresHover/JohnGallianoHover.JPG");
+    },
+    function() {
+        $(this).attr("src", "media/GDE_Maltratadores/JohnGalliano.jpg");
+    }
+    );
+  
+  $("#image6").hover(
+    function() {
+        $(this).attr("src", "media/GDE_MaltratadoresHover/KarlLagerfeldHover.JPG");
+    },
+    function() {
+        $(this).attr("src", "media/GDE_Maltratadores/KarlLagerfeld.jpg");
+    }
+    );
+
+  $("#image7").hover(
+    function() {
+        $(this).attr("src", "media/GDE_MaltratadoresHover/MarioTestinoHover.JPG");
+    },
+    function() {
+        $(this).attr("src", "media/GDE_Maltratadores/MarioTestino.jpg");
+    }
+    );
+
+  $("#image8").hover(
+    function() {
+        $(this).attr("src", "media/GDE_MaltratadoresHover/PatrickDemarcheliesHover.JPG");
+    },
+    function() {
+        $(this).attr("src", "media/GDE_Maltratadores/PatrickDemarchelier.jpg");
+    }
+    );
+
+  $("#image9").hover(
+    function() {
+        $(this).attr("src", "media/GDE_MaltratadoresHover/TerryRichardsonHover.JPG");
+    },
+    function() {
+        $(this).attr("src", "media/GDE_Maltratadores/TerryRichardson.jpg");
+    }
+    );
 
   //   CARROUSEL CARDS 
 document.addEventListener('DOMContentLoaded', function() {
@@ -260,3 +343,5 @@ document.addEventListener('DOMContentLoaded', function() {
         },
     });
 });
+
+
