@@ -318,14 +318,13 @@
        <section class="custom-poster p-4">
         <div class="container py-4">
             <h2 class="mb-4">Crea tu Póster Personalizado</h2>
-            <div class="row">
-                <div class="col-md-8">
-                    <canvas id="posterCanvas" width="800" height="600" style="border:1px solid #232323;"></canvas>
+            <div>
+                <div id="canvas-container">
+                    <canvas id="posterCanvas"  style="border:1px solid #232323;"></canvas>
                 </div>
-                <div class="col-md-4">
-                    <h4>Agregar Objetos</h4>
-                    <button id="addText" class="btn btn-primary mb-2">Agregar Texto</button>
-                    <button id="addImage" class="btn btn-secondary mb-2">Agregar Imagen</button>
+                <div>
+                    <button id="addText" class="btn btn-primary mb-2">Añadir Texto</button>
+                    <button id="addImage" class="btn btn-secondary mb-2">Añadir Objeto</button>
                     <button id="savePoster" class="btn btn-success mb-2">Guardar Póster</button>
                     <input type="file" id="imageLoader" name="imageLoader" accept="image/*" style="display:none;" />
                 </div>

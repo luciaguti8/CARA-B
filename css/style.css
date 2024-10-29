@@ -73,6 +73,10 @@ button {
     letter-spacing: 0.15em;
     padding: 8px 24px;
 }
+.swiper-button-next:hover, .swiper-button-prev:hover, .swiper-button-next:hover, .swiper-pagination-bullet:hover, button:not(:disabled):hover {
+    cursor: url('../media/Cursor/cursor-pointer.png'), auto;
+}
+
 .navbar-brand {
     color: var(--black);
     font-weight: 900;
@@ -329,7 +333,11 @@ footer ul {
     font-weight: bold;
     margin-top: 8px;
 }
-
+/* POSTER */
+#canvas-container {
+    width: 100%;
+    height: 85vh;
+}
 /* CARROUSEL ANONIMOS */
 .profile-image {
     width: 100px;

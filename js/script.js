@@ -49,7 +49,12 @@ function openModal(imageUrl) {
 // Espera a que el documento esté completamente cargado
 document.addEventListener('DOMContentLoaded', function() {
     // Inicializar el canvas de Fabric.js
+    const container = document.getElementById('canvas-container');
     const canvas = new fabric.Canvas('posterCanvas');
+
+    canvas.setWidth(container.clientWidth);
+    canvas.setHeight(container.clientHeight);
+    
     // Crea un rectángulo y agrégalo al lienzo
     // const rect = new fabric.Rect({
     //     left: 100,
@@ -75,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Loop imágenes
     // Ruta base de las imágenes y cantidad de imágenes a cargar
     const rutaBase = './media/Poster/';  // Cambia esto a la ruta donde tienes las imágenes
-    const cantidadImagenes = 7;
+    const cantidadImagenes = 8;
 
     // Cargar cada imagen usando un bucle
     for (let i = 1; i <= cantidadImagenes; i++) {
