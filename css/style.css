@@ -383,13 +383,13 @@ footer ul {
     height: 85vh;
 }
 /* CARROUSEL ANONIMOS */
-#profileCarousel {
+#vosotros {
     background-color: var(--black);
 }
-#profileCarousel h1 {
+#vosotros h1 {
     color: var(--white);
 }
-#profileCarousel p {
+#vosotros p {
     padding-left: 1vw;
 }
 .carousel-inner {
