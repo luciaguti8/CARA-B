@@ -14,6 +14,7 @@
     --white: #F8F8F8;
     --darkGrey: #757578;
     --lightGrey: #D2D2D7;
+    --swiper-navigation-size: 56px;
 }
 h1 {
     font-weight: 900;
@@ -22,6 +23,7 @@ h1 {
     letter-spacing: 0.35em;
     text-align: center;
     padding-bottom: 2vw;
+    line-height: 7.8vw;
 }
 h2 {
     font-weight: 900;
@@ -64,14 +66,14 @@ li {
     list-style: none;
 }
 button {
-    border: 2px solid;
-    border-radius: 12px;
-    font-size: 24px;
+    border: 2px solid; 
+    border-radius: 12px !important;
+    font-size: 24px !important;
     font-weight: 300;
     font-style: italic;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    padding: 8px 24px;
+    padding: 8px 24px !important;
 }
 .swiper-button-next:hover, .swiper-button-prev:hover, .swiper-button-next:hover, .swiper-pagination-bullet:hover, button:not(:disabled):hover {
     cursor: url('../media/Cursor/cursor-pointer.png'), auto;
@@ -119,11 +121,11 @@ button {
 }
 /* INDEX */
 section {
-    padding: 2vw 16vw !important;
+    padding: 4vw 16vw !important;
     background-color: var(--white);
     width: 100vw;
 }
-#intro {
+#intro, #intro-moda {
     padding-top: 5vw !important;
 }
 #intro img, #team img{
@@ -240,7 +242,33 @@ footer ul {
     }
   }
 
+/* INTRO MODA */
+#intro-moda img {
+    aspect-ratio: 16/9;
+    width: 100%;
+    object-fit: cover;
+    padding-bottom: 4vw;
+}
 /* CARROUSEL MODELOS*/
+#modelos {
+    background-color: var(--black);
+}
+#modelos p {
+    text-align: justify;
+    color: var(--white);
+}
+#modelos {
+    color: var(--white);
+}
+#modelos .col-6:first-child {
+    padding-right: 2vw;
+}
+#modelos .col-6:last-child {
+    padding-left: 2vw;
+}
+#modelos .row:last-child {
+    padding-top: 1.6vw;
+}
 .horizontal-carousel h2 {
     margin-bottom: 30px;
 }
@@ -256,8 +284,16 @@ footer ul {
 .swiper-horizontal>.swiper-pagination-bullets {
     bottom: -6px;
 }
+.swiper-pagination-bullet {
+    background-color: var(--white);
+}
 .swiper-pagination-bullet-active {
-    background-color: var(--primaryRed);
+    background-color: var(--white);
+}
+.swiper-button-next, .swiper-button-prev {
+    color: var(--black);
+    font-weight: 900;
+    font-size: 10vw;
 }
 #modelos .container {
     --bs-gutter-x: 0;
@@ -302,6 +338,10 @@ footer ul {
 
 
 /* CARROUSEL CARDS */
+#historicos {
+    background-color: var(--primaryPink);
+}
+
 .swiper-slide {
     display: flex;
     justify-content: center;
@@ -321,6 +361,10 @@ footer ul {
 }
 
 /* GALERÍA MALTRATADORES BOOTSTRAP */
+#maltratadores p {
+    text-align: justify;
+    padding-bottom: 2vw;
+}
 .gallery-image {
     width: 100%; 
     aspect-ratio: 3 / 4; 
@@ -339,6 +383,20 @@ footer ul {
     height: 85vh;
 }
 /* CARROUSEL ANONIMOS */
+#profileCarousel {
+    background-color: var(--black);
+}
+#profileCarousel h1 {
+    color: var(--white);
+}
+#profileCarousel p {
+    padding-left: 1vw;
+}
+.carousel-inner {
+    height: 450px;
+    display: flex;
+    align-items: center;
+}
 .profile-image {
     width: 100px;
     height: 130px;
@@ -348,12 +406,13 @@ footer ul {
 }
 
 .profile-card {
-    width: 40%;
+    width: 48%;
     display: flex;
     align-items: center;
     padding: 20px;
     border-radius: 0;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--white);
 }
 
 .profile-info {
@@ -363,4 +422,12 @@ footer ul {
 
 .profile-quote {
     width: 60%;
+}
+.carousel-control-next {
+    justify-content: start; 
+    top: 18vw;
+}
+.carousel-control-prev {
+    justify-content: end; 
+    top: 18vw;
 }
