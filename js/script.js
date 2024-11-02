@@ -81,30 +81,46 @@ document.addEventListener('DOMContentLoaded', function() {
     // Ruta base de las imágenes y cantidad de imágenes a cargar
     const rutaBase = './media/Poster/';  // Cambia esto a la ruta donde tienes las imágenes
     const cantidadImagenes = 8;
+    var imageIndex = 1;
 
-    // Cargar cada imagen usando un bucle
-    for (let i = 1; i <= cantidadImagenes; i++) {
-        const nombreArchivo = `canva_0${i}.png`;
+    // Agregar imagen al canvas
+    document.getElementById('addImage').addEventListener('click', function() {
+        
+        const nombreArchivo = `canva_0${imageIndex}.png`;
         const rutaImagen = rutaBase + nombreArchivo;
-
         // Cargar y agregar cada imagen al lienzo
         fabric.Image.fromURL(rutaImagen, function(img) {
         // Configurar posición y tamaño de cada imagen en el canvas (ajusta según tus necesidades)
         img.set({
-            left: i * 100,   // Aumenta la posición horizontal para cada imagen
-            top: 50,         // Posición vertical (puedes cambiarla según necesites)
+            left: canvas.width/2 - (img.width/2)*0.2,   // Aumenta la posición horizontal para cada imagen
+            top: canvas.height/2 - (img.height/2)*0.2,         // Posición vertical (puedes cambiarla según necesites)
             scaleX: 0.2,     // Escala en el eje X (para hacer la imagen más pequeña)
             scaleY: 0.2      // Escala en el eje Y
         });
         // Agrega la imagen al canvas
         canvas.add(img);
+        imageIndex ++;
+        if (imageIndex == 9) {
+
+            //TODO desactivar boton y cambiar estilo 
+        }
         });
+    });
+
+    const anchoPantalla = window.innerWidth;
+    console.log("El ancho de la pantalla es: " + anchoPantalla + "px");
+    let bolsaImg;
+    if(anchoPantalla >=800) {
+        bolsaImg = './media/Poster/Bolsa.png'
+    }else {
+        bolsaImg = './media/Poster/Bolsa-vertical.png'
     }
-    fabric.Image.fromURL('./media/Poster/Bolsa.png', function(img) {
+        
+    fabric.Image.fromURL(bolsaImg, function(img) {
         // Configurar posición y tamaño de cada imagen en el canvas (ajusta según tus necesidades)
         img.set({
-            left: 0,   // Aumenta la posición horizontal para cada imagen
-            top: 0,         // Posición vertical (puedes cambiarla según necesites)
+            left: 0,    // Aumenta la posición horizontal para cada imagen
+            top: 0,     // Posición vertical (puedes cambiarla según necesites)
             scaleX: canvas.width / img.width,
             scaleY: canvas.height / img.height,
             selectable: false,
@@ -112,6 +128,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         // Agrega la imagen al canvas
         canvas.add(img);
+        canvas.imgBolsa = img;
+    });
+
+    canvas.on('object:added', () => {
+        if (canvas.imgBolsa) {
+            canvas.bringToFront(canvas.imgBolsa);
+        }
     });
   
     // Agregar texto al canvas
@@ -127,11 +150,10 @@ document.addEventListener('DOMContentLoaded', function() {
         canvas.add(text);
         canvas.setActiveObject(text);
     });
+
+
   
-    // // Agregar imagen al canvas
-    // document.getElementById('addImage').addEventListener('click', function() {
-    //     document.getElementById('imageLoader').click();
-    // });
+
   
     // // Manejar la carga de la imagen
     // document.getElementById('imageLoader').addEventListener('change', function(e) {
