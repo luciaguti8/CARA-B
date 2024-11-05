@@ -75,7 +75,7 @@ button {
     letter-spacing: 0.15em;
     padding: 8px 24px !important;
 }
-.swiper-button-next:hover, .swiper-button-prev:hover, .swiper-button-next:hover, .swiper-pagination-bullet:hover, button:not(:disabled):hover, .carousel-control-next, .carousel-control-prev, .carousel-control-next-icon, .carousel-control-prev-icon, .carousel-item img{
+.swiper-button-next:hover, .swiper-button-prev:hover, .swiper-button-next:hover, .swiper-pagination-bullet:hover, button:not(:disabled):hover, .carousel-control-next, .carousel-control-prev, .carousel-control-next-icon, .carousel-control-prev-icon, .carousel-item img, .nav-link, .navbar-brand {
     cursor: url('../media/Cursor/cursor-pointer.png'), auto !important;
 }
 
