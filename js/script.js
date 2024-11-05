@@ -366,6 +366,7 @@ document.addEventListener('DOMContentLoaded', function() {
         spaceBetween: 30, // Espacio entre slides (en píxeles)
         mousewheel: {
             invert: false,
+            releaseOnEdges: true,
         },
         pagination: {
             el: ".swiper-pagination",
