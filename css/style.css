@@ -75,7 +75,7 @@ button {
     letter-spacing: 0.15em;
     padding: 8px 24px !important;
 }
-.swiper-button-next:hover, .swiper-button-prev:hover, .swiper-button-next:hover, .swiper-pagination-bullet:hover, button:not(:disabled):hover {
+.swiper-button-next:hover, .swiper-button-prev:hover, .swiper-button-next:hover, .swiper-pagination-bullet:hover, button:not(:disabled):hover, a:hover{
     cursor: url('../media/Cursor/cursor-pointer.png'), auto;
 }
 
@@ -162,6 +162,13 @@ section {
     width: 100%;
     /* max-height: 80vh; */
     object-fit: contain;
+}
+#customCarousel .carousel-control-next {
+    justify-content: start; 
+}
+#customCarousel .carousel-control-prev {
+    justify-content: end; 
+    color: var(--black);
 }
 
 /* FOOTER  */
@@ -391,7 +398,7 @@ footer ul {
 #vosotros p {
     padding-left: 1vw;
 }
-.carousel-inner {
+#vosotros .carousel-inner {
     height: 450px;
     display: flex;
     align-items: center;
@@ -422,11 +429,11 @@ footer ul {
 .profile-quote {
     width: 60%;
 }
-.carousel-control-next {
+#vosotros .carousel-control-next {
     justify-content: start; 
     top: 18vw;
 }
-.carousel-control-prev {
+#vosotros .carousel-control-prev {
     justify-content: end; 
     top: 18vw;
 }

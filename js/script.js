@@ -1,49 +1,52 @@
-// Nav
-let lastScrollTop = 0;
-const navbar = document.querySelector('.navbar');
-const scrollThreshold = 150; // Cambia este valor si deseas un umbral diferente
+$(document).ready(function(){
+    // Nav
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+    const scrollThreshold = 150; // Cambia este valor si deseas un umbral diferente
 
-window.addEventListener('scroll', function() {
-    let scrollTop = window.scrollY || document.documentElement.scrollTop;
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-    // Solo ejecutar si el scroll supera el umbral
-    if (Math.abs(scrollTop - lastScrollTop) <= scrollThreshold) {
-        return; // Si el desplazamiento es menor que el umbral, no hacer nada
-    }
+        // Solo ejecutar si el scroll supera el umbral
+        if (Math.abs(scrollTop - lastScrollTop) <= scrollThreshold) {
+            return; // Si el desplazamiento es menor que el umbral, no hacer nada
+        }
 
-    if (scrollTop > lastScrollTop) {
-        // Scroll Down
-        navbar.classList.add('hide');
-        navbar.classList.remove('show');
-    } else {
-        // Scroll Up
-        navbar.classList.remove('hide');
-        navbar.classList.add('show');
-    }
-    lastScrollTop = scrollTop;
+        if (scrollTop > lastScrollTop) {
+            // Scroll Down
+            navbar.classList.add('hide');
+            navbar.classList.remove('show');
+        } else {
+            // Scroll Up
+            navbar.classList.remove('hide');
+            navbar.classList.add('show');
+        }
+        lastScrollTop = scrollTop;
+    });
+    // INDEX
+    if (document.querySelector('#quote-intro') && document.querySelector('#quote-team')) {
+        var typed = new Typed('#quote-intro', {
+            strings: ['Prepárate para ver el mundo con nuevos ojos...', 'Prepárate para descubrir su "CARA B".'],
+            typeSpeed: 70,
+            loop: true,
+        });
+        var typed = new Typed('#quote-team', {
+            strings: ['"CARA B" se compromete a abrir los ojos del mundo...', 'Y mostrar la verdad incómoda que yace debajo de la superficie de nuestro día a día.'],
+            typeSpeed: 70,
+            loop: true,
+        });
+    };
+    
 });
 
 
-// INDEX
-if (document.querySelector('#quote-intro') && document.querySelector('#quote-team')) {
-    var typed = new Typed('#quote-intro', {
-        strings: ['Prepárate para ver el mundo con nuevos ojos...', 'Prepárate para descubrir su "CARA B".'],
-        typeSpeed: 70,
-        loop: true,
-    });
-    var typed = new Typed('#quote-team', {
-        strings: ['"CARA B" se compromete a abrir los ojos del mundo...', 'Y mostrar la verdad incómoda que yace debajo de la superficie de nuestro día a día.'],
-        typeSpeed: 70,
-        loop: true,
-    });
-};
 
 // CARROUSEL EJEMPLARES
-function openModal(imageUrl) {
-    document.getElementById('modalImage').src = imageUrl;
-    var imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
-    imageModal.show();
-}
+// function openModal(imageUrl) {
+//     document.getElementById('modalImage').src = imageUrl;
+//     var imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+//     imageModal.show();
+// }
 
 // POSTER 
 // Espera a que el documento esté completamente cargado
@@ -177,23 +180,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // });
   
     // Evento de guardado del botón
-    document.getElementById('savePoster').addEventListener('click', function() {
-        try {
-            const dataURL = canvas.toDataURL({
-                format: 'png'
-            });
+//     document.getElementById('savePoster').addEventListener('click', function() {
+//         try {
+//             const dataURL = canvas.toDataURL({
+//                 format: 'png'
+//             });
 
-            // Crear un enlace para descargar la imagen
-            const link = document.createElement('a');
-            link.href = dataURL;
-            link.download = 'mi-poster.png';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        } catch (error) {
-            console.error("Error al guardar la imagen:", error);
-        }
-    });
+//             // Crear un enlace para descargar la imagen
+//             const link = document.createElement('a');
+//             link.href = dataURL;
+//             link.download = 'mi-poster.png';
+//             document.body.appendChild(link);
+//             link.click();
+//             document.body.removeChild(link);
+//         } catch (error) {
+//             console.error("Error al guardar la imagen:", error);
+//         }
+//     });
   });
 
 // HOVER CAMERON RUSSEL
@@ -215,7 +218,7 @@ document.querySelectorAll('.gallery-item').forEach((item) => {
     });
 });
 
-  // CARROUSEL HORIZONTAL
+  // CARROUSEL CASOS ARCHIVADOS
 document.addEventListener('DOMContentLoaded', function() {
     // Inicialización del carrusel Swiper
     var swiper = new Swiper(".mySwiper", {
@@ -355,7 +358,7 @@ images.forEach(image => {
     );
 });
 
-  //   CARROUSEL CARDS 
+  //   CARROUSEL CASOS HISTORICOS 
 document.addEventListener('DOMContentLoaded', function() {
     // Inicialización del carrusel Swiper
     var swiper = new Swiper(".myHorizontalSwiper", {
@@ -394,5 +397,4 @@ document.addEventListener('DOMContentLoaded', function() {
         },
     });
 });
-
 
