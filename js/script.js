@@ -36,7 +36,32 @@ $(document).ready(function(){
             loop: true,
         });
     };
-    
+    // FORM
+    $('#submit').click(function() {
+        let name = $('#user_name').val();
+        let email = $('#user_email').val();
+        var message = "";
+        if (name == "" || email == "" ) {
+            message = "Debes completar tu nombre y correo para poder suscribirte a nuestra Newsletter";
+        } else if (!validateEmail(email)) {
+            message = "Por favor, inserta una dirección de correo válida";
+        } else {
+            message = "¡Muchas gracias por contactar con nosotros! Recibirás una respuesta lo antes posible";
+        }
+        $("#modal-text").html(message);
+        $("#thanks-modal").css('display', 'block');
+        return false;
+    });
+    $('.close').click(function(){
+        $("#thanks-modal").css('display', 'none');
+    });
+    const validateEmail = (email) => {
+    return String(email)
+        .toLowerCase()
+        .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+    };
 });
 
 
