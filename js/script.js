@@ -1,3 +1,5 @@
+AOS.init();
+
 $(document).ready(function(){
     // Nav
     let lastScrollTop = 0;
@@ -37,21 +39,21 @@ $(document).ready(function(){
         });
     };
     // FORM
-    $('#submit').click(function() {
-        let name = $('#user_name').val();
-        let email = $('#user_email').val();
-        var message = "";
-        if (name == "" || email == "" ) {
-            message = "Debes completar tu nombre y correo para poder suscribirte a nuestra Newsletter";
-        } else if (!validateEmail(email)) {
-            message = "Por favor, inserta una dirección de correo válida";
-        } else {
-            message = "¡Muchas gracias por contactar con nosotros! Recibirás una respuesta lo antes posible";
-        }
-        $("#modal-text").html(message);
-        $("#thanks-modal").css('display', 'block');
-        return false;
-    });
+        $('#submit').click(function() {
+            let name = $('#user_name').val();
+            let email = $('#user_email').val();
+            var message = "";
+            if (name == "" || email == "" ) {
+                message = "Debes completar tu nombre y correo para poder suscribirte a nuestra Newsletter";
+            } else if (!validateEmail(email)) {
+                message = "Por favor, inserta una dirección de correo válida";
+            } else {
+                message = "¡Muchas gracias por contactar con nosotros! Recibirás una respuesta lo antes posible";
+            }
+            $("#modal-text").html(message);
+            $("#thanks-modal").css('display', 'block');
+            return false;
+        });
     $('.close').click(function(){
         $("#thanks-modal").css('display', 'none');
     });
@@ -62,6 +64,7 @@ $(document).ready(function(){
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         );
     };
+    
 });
 
 
@@ -262,15 +265,15 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         breakpoints: {
             // Ajustes responsivos
-            320: {
+            576: {
                 slidesPerView: 1,
                 slidesPerGroup: 1,
             },
-            640: {
+            768: {
                 slidesPerView: 2,
                 slidesPerGroup: 2,
             },
-            1024: {
+            1200: {
                 slidesPerView: 3,
                 slidesPerGroup: 3,
             },
@@ -408,8 +411,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 slidesPerView: 1,
                 spaceBetween: 10,
             },
-            576: {
-                slidesPerView: 2,
+            768: {
+                slidesPerView: 1,
                 spaceBetween: 15,
             },
             // 768: {

@@ -2,6 +2,7 @@
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     cursor: url('../media/Cursor/cursor-default.png'), auto;
+    scroll-behavior: smooth;
 }
 
 /* variables */
@@ -15,6 +16,9 @@
     --darkGrey: #757578;
     --lightGrey: #D2D2D7;
     --swiper-navigation-size: 56px;
+    --bs-breakpoint-sm: 576px;
+    --bs-breakpoint-md: 768px;
+    --bs-breakpoint-lg: 1188px;
 }
 h1 {
     font-weight: 900;
@@ -75,21 +79,21 @@ button {
     letter-spacing: 0.15em;
     padding: 8px 24px !important;
 }
-.swiper-button-next:hover, .swiper-button-prev:hover, .swiper-button-next:hover, .swiper-pagination-bullet:hover, button:not(:disabled):hover, .carousel-control-next, .carousel-control-prev, .carousel-control-next-icon, .carousel-control-prev-icon, .carousel-item img, .nav-link, .navbar-brand, .close {
+.swiper-button-next:hover, .swiper-button-prev:hover, .swiper-button-next:hover, .swiper-pagination-bullet:hover, button:not(:disabled):hover, .carousel-control-next, .carousel-control-prev, .carousel-control-next-icon, .carousel-control-prev-icon, .carousel-item img, .nav-link, .navbar-brand, .close, input {
     cursor: url('../media/Cursor/cursor-pointer.png'), auto !important;
 }
 
 .navbar-brand {
     color: var(--black);
     font-weight: 900;
-    font-size: 20px;
+    font-size: 1.2vw;
     text-transform: uppercase;  
     letter-spacing: 0.3em;
 }
 .nav-item {
     color: var(--black);    
     font-weight: 900;
-    font-size: 20px;
+    font-size: 1.2vw;
     text-transform: uppercase;  
     letter-spacing: 0.3em;
 }
@@ -112,7 +116,7 @@ button {
     margin: 0; /* Quita margen adicional */
     border: solid black 1px;
     color: black;
-    min-width: 150px; /* Establece un tamaño mínimo */
+    min-width: 50px; /* Establece un tamaño mínimo */
     opacity: 100;
 }
  nav .container-fluid {
@@ -212,6 +216,9 @@ footer button:hover {
 .socials {
     gap: 16px;
 }
+.socials-icons-phone {
+    display: none;
+}
 footer h3, footer p, footer .fa-brands{
     color: var(--white);
 }
@@ -280,7 +287,7 @@ footer ul {
     width: 100%;
     position: relative;
     text-align: right;
-    color: var(--primaryPink);
+    color: var(--white);
     background-color: var(--primaryRed);
     height: 4vw;
     border-radius: 12px 12px 0px 0px;
@@ -288,6 +295,7 @@ footer ul {
 }
 .modal-content i:hover {
     color: var(--secondaryRed);
+    transition: 0.2s ease-in-out;
 }
 .modal-content h5 {
     width: 100%;
@@ -353,9 +361,6 @@ footer ul {
 #modelos .container {
     --bs-gutter-x: 0;
 }
-#modelos {
-    padding-top: 5vw !important;
-}
 /* .swiper-slide {
     aspect-ratio: 4/3;
 } */
@@ -419,6 +424,8 @@ footer ul {
 #maltratadores p {
     text-align: justify;
     padding-bottom: 2vw;
+    column-count: 2;
+    column-gap: 4vw;
 }
 .gallery-image {
     width: 100%; 
@@ -490,4 +497,93 @@ footer ul {
     justify-content: end; 
     top: 18vw;
     padding: 0 !important;
+}
+/* Tablet */
+@media screen and (max-width: 1200px)  {
+    section {
+        padding: 4vw 10vw !important;
+    }
+    h1 {
+        font-size: 10vw;
+        line-height: 10vw;
+    }
+    h2 {
+        font-size: 5vw;
+    }
+    p {
+        font-size: 14px;
+    }
+    .navbar-brand {
+        font-size: 30px;
+    }
+    .nav-item {
+        font-size: 20px;
+    }
+    .navbar button {
+        border: 0px;
+    }
+    .hr-menu {
+        display: none;
+    }
+    #intro, #intro-moda {
+        padding-top: 6.8vw !important;
+    }
+    .marquee {
+        --gap: 4vw;
+    }
+    footer h3{
+        font-size: 2.8vw;
+    }
+    footer p {
+        font-size: 11px;
+    }
+    .swiper-slide .card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 576px)  { 
+    h1 {
+        font-size: 10vw;
+        line-height: 10vw;
+    }
+    h5 {
+        font-size: 16px;
+    }
+    #intro, #intro-moda {
+        padding-top: 14vw !important;
+    }
+    #intro img, #team img {
+        aspect-ratio: 1 / 1;
+    }
+    .carousel-item img {
+        aspect-ratio: 1 / 1;
+    }
+    h2 {
+        font-size: 10vw;
+    }
+    footer .col-12 {
+        margin-top: 2vw;
+    }
+    footer .col-12:first-child {
+        margin-top: 10vw;
+    }
+    footer p {
+        margin-bottom: 0;
+    }
+    .socials-icons {
+        display: none;
+    }
+    .socials-icons-phone {
+        display: block;
+    }
+    footer h3 {
+        font-size: 5.2vw;
+    }
+    footer form, footer h3 {
+        width: 80%;
+    }
+    .carousel-control-prev, .carousel-control-next {
+        display: none;
+    }
 }
