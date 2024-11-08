@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const anchoPantalla = window.innerWidth;
     console.log("El ancho de la pantalla es: " + anchoPantalla + "px");
     let bolsaImg;
-    if(anchoPantalla >=800) {
+    if(anchoPantalla >=992) {
         bolsaImg = './media/Poster/Bolsa.png'
     }else {
         bolsaImg = './media/Poster/Bolsa-vertical.png'
@@ -375,15 +375,42 @@ const images = [
     { id: "#image9", hover: "TerryRichardson", },
 ];
 
-images.forEach(image => {
-    $(image.id).hover(
-        function() {
-            $(this).attr("src", `media/GDE_MaltratadoresHover/${image.hover}Hover.JPG`);
-        },
-        function() {
-            $(this).attr("src", `media/GDE_Maltratadores/${image.hover}.jpg`);
-        }
-    );
+function updateImages() {
+    if (window.innerWidth < 992) {
+        // Cambiar las imágenes base a las versiones "hover" en pantallas pequeñas
+        images.forEach(image => {
+            $(image.id).attr("src", `media/GDE_MaltratadoresHover/${image.hover}Hover.JPG`);
+        });
+        
+        // Desactivar efecto hover en pantallas pequeñas
+        images.forEach(image => {
+            $(image.id).off("mouseenter mouseleave");
+        });
+
+    } else {
+        // Restaurar las imágenes originales y activar efecto hover en pantallas grandes
+        images.forEach(image => {
+            $(image.id).attr("src", `media/GDE_Maltratadores/${image.hover}.jpg`);
+            
+            // Reactivar el efecto hover
+            $(image.id).hover(
+                function() {
+                    $(this).attr("src", `media/GDE_MaltratadoresHover/${image.hover}Hover.JPG`);
+                },
+                function() {
+                    $(this).attr("src", `media/GDE_Maltratadores/${image.hover}.jpg`);
+                }
+            );
+        });
+    }
+}
+
+// Llamar a la función al cargar la página
+$(document).ready(function() {
+    updateImages();
+
+    // Escuchar cambios de tamaño de pantalla
+    $(window).resize(updateImages);
 });
 
   //   CARROUSEL CASOS HISTORICOS 
