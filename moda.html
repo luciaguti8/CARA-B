@@ -148,7 +148,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="gallery-text text-end text-lg-start">
+                <div class="gallery-text text-center text-md-end text-lg-start">
                     <p>Cameron Russell, supermodelo estadounidense nacida el 14 de junio de 1987 en Cambridge, Massachusetts, fue descubierta tras graduarse de la escuela secundaria y ha trabajado con prestigiosas marcas de moda. Reconocida por su belleza clásica y carisma, destaca además por su activismo social, promoviendo una mayor diversidad en la industria y abogando por la representación de distintos cuerpos, etnias y géneros en moda y publicidad. </p>
                 </div>
             </div>
@@ -167,7 +167,7 @@
             </div>
             <!-- Fila 3 -->
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="gallery-text text-md-end">
+                <div class="gallery-text text-center text-md-end">
                     <p>En su charla TED, Cameron Russell ofreció una visión honesta sobre la industria de la moda, desmontando el mito del glamour. Habló sobre la falta de diversidad, cómo su identidad racial y de género influyó en sus oportunidades, y llamó a un cambio en la representación de la belleza en los medios, impactando a una audiencia poco acostumbrada a escuchar a modelos hablar sobre discriminación en la industria.</p>
                 </div>
             </div>
@@ -231,7 +231,7 @@
             </div>
             <!-- Fila 7 -->
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="gallery-text text-start text-lg-end">
+                <div class="gallery-text text-center text-md-start text-lg-end">
                     <p>El legado de Cameron Russell en la industria de la moda va mucho más allá de sus logros como modelo. Su valentía al compartir su historia ha generado un cambio significativo en la forma en que se percibe la belleza y la autenticidad en los medios, y ha inspirado a otros a levantar sus voces y luchar por una representación más diversa y justa en la moda y más allá.</p>
                 </div>
             </div>
@@ -369,8 +369,8 @@
         <div class="carousel-inner">
             <!-- Grupo de dos perfiles en un solo item del carrusel -->
             <div class="carousel-item active">
-                <div class="d-flex justify-content-between">
-                    <div class="profile-card">
+                <div class="d-flex justify-content-between row">
+                    <div class="col-12 col-md-6 profile-card">
                         <div class="profile-info">
                             <img src="media/CA_Anonimos/Anonimo1.jpg" alt="Foto Perfil 1" class="profile-image">
                             <div>
@@ -383,7 +383,7 @@
                             <P>"En un shooting en Ávila, el cliente se quejó de mi cabello y el maquillador lo cortó en ese mismo momento. Fue un desastre, y cuando volví a la agencia, me culparon. Además, la presión para adelgazar era tan fuerte que me sugirieron fumar para controlar mi apetito. Fue muy frustrante."</P>
                         </div>
                     </div>
-                    <div class="profile-card">
+                    <div class="col-12 col-md-6 profile-card">
                         <div class="profile-info">
                             <img src="media/CA_Anonimos/Anonimo2.jpg" alt="Foto Perfil 2" class="profile-image">
                             <div>
@@ -471,13 +471,13 @@
         </button>
     </section>
            <!-- POSTER -->
-    <section id="poster" class="custom-poster">
-        <div class="container-fluid py-4">
-            <h1 class="mb-4 text-start" data-aos="fade-right">Crea tu Póster</h1>
-            <div>
-                <div class="d-flex justify-content-center">
-                    <button id="addText" class="btn btn-primary mb-2 me-4">Añadir Texto</button>
-                    <button id="addImage" class="btn btn-secondary mb-2 ms-4">Añadir Objeto</button>
+    <section id="poster" class="custom-poster container-fluid">
+        <div>
+            <h1 class="text-start" data-aos="fade-right">Crea tu Póster</h1>
+            <div >
+                <div class="d-flex justify-content-center gap-2 gap-md-4 row mb-4">
+                    <button id="addImage" class="col-8 col-md-4 btn-addimg">Añadir Objeto</button>
+                    <button id="addText" class="col-8 col-md-4 btn-addtext">Añadir Texto</button>
                     <!-- <button id="savePoster" class="btn btn-success mb-2">Guardar Póster</button>
                     <input type="file" id="imageLoader" name="imageLoader" accept="image/*" style="display:none;" /> -->
                 </div>
@@ -514,7 +514,7 @@
                 <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
                     <h3 class="text-center">Suscríbete a nuestra newsletter</h3>
                 </div>
-                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
+                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start">
                     <form class="d-flex flex-column justify-content-center">
                         <input type="text" id="user_name" name="name" placeholder="Nombre" required>
                         <input type="text" id="user_email" name="mail" placeholder="Correo electrónico" required>

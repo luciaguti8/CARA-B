@@ -139,7 +139,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     const anchoPantalla = window.innerWidth;
-    console.log("El ancho de la pantalla es: " + anchoPantalla + "px");
     let bolsaImg;
     if(anchoPantalla >=992) {
         bolsaImg = './media/Poster/Bolsa.png'
@@ -181,6 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
         canvas.add(text);
         canvas.setActiveObject(text);
     });
+    
 
 
   
@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         breakpoints: {
             // Ajustes responsivos
-            576: {
+            0: {
                 slidesPerView: 1,
                 slidesPerGroup: 1,
             },
@@ -434,22 +434,14 @@ document.addEventListener('DOMContentLoaded', function() {
         // },
         breakpoints: {
             // Ajustes responsivos
-            320: {
+            0: {
                 slidesPerView: 1,
-                spaceBetween: 10,
+                slidesPerGroup: 1,
             },
             768: {
-                slidesPerView: 1,
-                spaceBetween: 15,
+                slidesPerView: 2,
+                slidesPerGroup: 2,
             },
-            // 768: {
-            //     slidesPerView: 3,
-            //     spaceBetween: 20,
-            // },
-            // 992: {
-            //     slidesPerView: 4,
-            //     spaceBetween: 30,
-            // },
         },
     });
 });

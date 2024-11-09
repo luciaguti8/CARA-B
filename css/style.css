@@ -447,6 +447,24 @@ footer ul {
 #posterCanvas {
     width: 100%;
 }
+.btn-addimg {
+    background-color: var(--primaryRed);
+    color: var(--primaryPink);
+}
+.btn-addimg:hover {
+    background-color: var(--secondaryRed);
+    color: var(--white);
+    transition: 0.2s ease-in-out;
+}
+.btn-addtext {
+    background-color: var(--primaryPink);
+    color: var(--primaryRed);
+}
+.btn-addtext:hover {
+    background-color: var(--secondaryPink);
+    color: var(--white);
+    transition: 0.2s ease-in-out;
+}
 /* CARROUSEL ANONIMOS */
 #vosotros {
     background-color: var(--black);
@@ -542,7 +560,7 @@ footer ul {
         max-width: 100%;
     }
 }
-@media screen and (max-width: 576px)  { 
+@media screen and (max-width: 756px)  { 
     h1 {
         font-size: 10vw;
         line-height: 10vw;
@@ -585,5 +603,24 @@ footer ul {
     }
     .carousel-control-prev, .carousel-control-next {
         display: none;
+    }
+    .swiper-button-next, .swiper-button-prev {
+        display: none;
+    }
+    #intro-moda img {
+        aspect-ratio: 1 / 1;
+    }
+    #modelos p {
+        text-align: center;
+        column-count: 1;
+    }
+    #maltratadores p {
+        text-align: center;
+        column-count: 1;
+    }
+    button {
+        border: 2px solid; 
+        font-size: 16px !important;
+        padding: 8px 24px !important;
     }
 }
