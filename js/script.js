@@ -1,6 +1,6 @@
 AOS.init({
-    offset: 50,
-    anchorPlacement: 'top-bottom',
+    offset: 0,
+    once: true
 });
 
 $(document).ready(function(){
