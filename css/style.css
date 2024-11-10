@@ -78,7 +78,7 @@ button {
     letter-spacing: 0.15em;
     padding: 8px 24px !important;
 }
-.swiper-button-next:hover, .swiper-button-prev:hover, .swiper-button-next:hover, .swiper-pagination-bullet:hover, button:not(:disabled):hover, .carousel-control-next, .carousel-control-prev, .carousel-control-next-icon, .carousel-control-prev-icon, .carousel-item img, .nav-link, .navbar-brand, .close, input {
+.swiper-button-next:hover, .swiper-button-prev:hover, .swiper-button-next:hover, .swiper-pagination-bullet:hover, button:not(:disabled):hover, .carousel-control-next, .carousel-control-prev, .carousel-control-next-icon, .carousel-control-prev-icon, .carousel-item img, .nav-link, .navbar-brand, .close, input, .navbar-toggler-icon {
     cursor: url('../media/Cursor/cursor-pointer.png'), auto !important;
 }
 /* menú */
@@ -119,9 +119,12 @@ button {
     min-width: 50px;
     opacity: 100;
 }
- nav .container-fluid {
+nav .container-fluid {
     gap: 16px;
     padding: 0.2vw 4vw;
+}
+.navbar-toggler {
+    color: transparent;
 }
 /* INDEX.HTML */
 /* intro */
@@ -501,6 +504,9 @@ footer ul {
     }
     p {
         font-size: 14px;
+    }
+    button {
+        font-size: 18px !important;
     }
     .navbar-brand {
         font-size: 30px;
