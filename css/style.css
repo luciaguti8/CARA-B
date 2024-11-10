@@ -91,14 +91,15 @@ button {
     letter-spacing: 0.3em;
 }
 .nav-item {
-    color: var(--black);    
+    color: var(--black) !important;    
     font-weight: 900;
     font-size: 1.2vw;
     text-transform: uppercase;  
     letter-spacing: 0.3em;
 }
-.nav-item:hover {
-    color: var(--primaryRed);
+.nav-item a:hover {
+    color: var(--primaryRed) !important;
+    transition: 0.2s ease-in-out;
 }
 .my-bg-color {
     background-color: var(--white);
@@ -465,16 +466,25 @@ footer ul {
     color: var(--white);
     transition: 0.2s ease-in-out;
 }
+.btn-disabled {
+    background-color: var(--lightGrey);
+    color: var(--white);
+}
 /* CARROUSEL ANONIMOS 2 */
+#vosotros {
+    background-color: var(--black);
+}
+#vosotros h1 {
+    color: var(--white);
+}
 .card-anonimo {
     background: var(--white);
     border: 2px solid var(--black);
-    padding: 16px;
+    padding: 2vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 100%;
     box-sizing: border-box;
     gap: 2vw;
     min-height: 52vh;
@@ -482,7 +492,7 @@ footer ul {
 
 /* Estilos para la imagen */
 .card-img-anonimo p {
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     text-align: center;
     font-style: italic;
     line-height: 1.8vw;
@@ -492,7 +502,7 @@ footer ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 16px;
+    align-items: center;
 }
 
 .card-img-anonimo img {
@@ -504,22 +514,14 @@ footer ul {
     margin-bottom: 1vw;
 }
 
-/* Estilos para la información de la tarjeta */
 .card-info-anonimo {
     text-align: center;
     width: 50%;
 }
 
-.card-info-anonimo h5 {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-    color: #333;
-}
-
 .card-info-anonimo p {
-    font-size: 0.9rem;
-    color: #666;
-    line-height: 1.4;
+    color: var(--darkGrey);
+    margin-bottom: 0;
 }
 
 /* .card-anonimo {
@@ -639,6 +641,16 @@ footer ul {
         width: 100%;
         max-width: 100%;
     }
+    .card-img-anonimo p {
+        font-size: 1.8vw;
+    }
+    .modal-content h5 {
+        height: 26vw;
+    }
+    .modal-content i {
+        font-size: 3vw;
+        height: 5vw;
+    }
 }
 @media screen and (max-width: 756px)  { 
     h1 {
@@ -664,7 +676,7 @@ footer ul {
         margin-top: 2vw;
     }
     footer .col-12:first-child {
-        margin-top: 10vw;
+        margin-top: 15vw;
     }
     footer p {
         margin-bottom: 0;
@@ -691,16 +703,45 @@ footer ul {
         aspect-ratio: 1 / 1;
     }
     #modelos p {
-        text-align: center;
         column-count: 1;
     }
     #maltratadores p {
-        text-align: center;
         column-count: 1;
     }
     button {
         border: 2px solid; 
         font-size: 16px !important;
         padding: 8px 24px !important;
+    }
+    .modal-content {
+        width: 80%;
+    }
+    .modal-content i {
+        font-size: 5vw;
+        height: 8vw;
+    }
+    .modal-content h5 {
+        height: 30vw;
+    }
+    .card-anonimo {
+        flex-direction: column;
+        min-height: 80vh;
+    }
+    .card-img-anonimo {
+        width: 100%;
+    }
+    .card-img-anonimo img {
+        margin-bottom: 4vw;
+        width: 60%;
+    }
+    .card-info-anonimo {
+        width: 80%;
+    }
+    .card-img-anonimo p {
+        font-size: 6vw;
+        line-height: 6.8vw;
+    }
+    .swiper-slide .card {
+        min-height: 82vh;
     }
 }

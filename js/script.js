@@ -132,9 +132,16 @@ document.addEventListener('DOMContentLoaded', function() {
         // Agrega la imagen al canvas
         canvas.add(img);
         imageIndex ++;
-        if (imageIndex == 9) {
 
-            //TODO desactivar boton y cambiar estilo 
+        const boton = document.getElementById("addImage")
+        if (imageIndex == 9) {
+            boton.classList.add("btn-disabled"); 
+            boton.classList.remove("btn-addimg");
+            boton.disabled = true;
+        } else {
+            boton.classList.remove("btn-disabled");
+            boton.classList.add("btn-addimg");
+            boton.disabled = false;
         }
         });
     });
@@ -274,7 +281,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 slidesPerView: 2,
                 slidesPerGroup: 2,
             },
-            1200: {
+            992: {
                 slidesPerView: 3,
                 slidesPerGroup: 3,
             },
@@ -284,7 +291,7 @@ document.addEventListener('DOMContentLoaded', function() {
 //   carousel anonimos
   document.addEventListener('DOMContentLoaded', function() {
     // Inicialización del carrusel Swiper
-    var swiper = new Swiper(".mySwiper", {
+    var swiper = new Swiper(".swiper-anonimos", {
         slidesPerView: 2, // Número de slides visibles
         spaceBetween: 30, // Espacio entre slides (en píxeles)
         slidesPerGroup: 3, // Número de slides que se moverán en cada navegación
