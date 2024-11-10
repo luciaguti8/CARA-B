@@ -64,6 +64,7 @@ $(document).ready(function(){
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         );
     };
+
     
 });
 
@@ -280,6 +281,66 @@ document.addEventListener('DOMContentLoaded', function() {
         },
     });
   });
+//   carousel anonimos
+  document.addEventListener('DOMContentLoaded', function() {
+    // Inicialización del carrusel Swiper
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2, // Número de slides visibles
+        spaceBetween: 30, // Espacio entre slides (en píxeles)
+        slidesPerGroup: 3, // Número de slides que se moverán en cada navegación
+        loop: true, // Habilita el loop
+        loopFillGroupWithBlank: true, // Rellena el grupo con slides en blanco si es necesario
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            // Ajustes responsivos
+            0: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+            },
+            768: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+            },
+        },
+    });
+  });
+    //     //   CARROUSEL JS
+    // const track = document.querySelector('.carousel-track');
+    // const cards = Array.from(track.children);
+    // let currentIndex = 0;
+
+    // // Función para mover el carrusel
+    // function moveCarouselAnon(direction) {
+    //     const cardWidth = cards[0].getBoundingClientRect().width;
+    //     const visibleCards = window.innerWidth >= 1200 ? 1 : 2;
+    //     const totalCards = cards.length;
+
+    //     // Calcula el nuevo índice y asegura que esté en el rango de tarjetas
+    //     currentIndex += direction;
+    //     if (currentIndex < 0) {
+    //         currentIndex = totalCards - visibleCards;
+    //     } else if (currentIndex > totalCards - visibleCards) {
+    //         currentIndex = 0;
+    //     }
+
+    //     // Mueve el carrusel
+    //     const moveDistance = -cardWidth * currentIndex;
+    //     track.style.transform = `translateX(${moveDistance}px)`;
+    // }
+
+    // // Detectar cambios en el tamaño de la ventana para reiniciar el índice si cambia el número de tarjetas visibles
+    // window.addEventListener('resize', () => {
+    //     currentIndex = 0;
+    //     moveCarouselAnon(0); // Reinicia la posición del carrusel
+    // });
+
 
   //CHANGEIMAGE
 // $("#image1").hover(

@@ -465,8 +465,88 @@ footer ul {
     color: var(--white);
     transition: 0.2s ease-in-out;
 }
-/* CARROUSEL ANONIMOS */
-#vosotros {
+/* CARROUSEL ANONIMOS 2 */
+.card-anonimo {
+    background: var(--white);
+    border: 2px solid var(--black);
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    box-sizing: border-box;
+    gap: 2vw;
+    min-height: 52vh;
+}
+
+/* Estilos para la imagen */
+.card-img-anonimo p {
+    font-size: 1.4vw;
+    text-align: center;
+    font-style: italic;
+    line-height: 1.8vw;
+}
+.card-img-anonimo {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.card-img-anonimo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    aspect-ratio: 3/4;
+    margin-bottom: 1vw;
+}
+
+/* Estilos para la información de la tarjeta */
+.card-info-anonimo {
+    text-align: center;
+    width: 50%;
+}
+
+.card-info-anonimo h5 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.card-info-anonimo p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* .card-anonimo {
+    background: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    min-width: 50%;
+    margin: 0 10px;
+}
+
+.card-img-anonimo img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    padding-right: 16px;
+}
+
+.card-img-anonimo {
+    width: 50%;
+}
+
+.card-info-anonimo {
+    width: 50%;
+} */
+/* #vosotros {
     background-color: var(--black);
 }
 #vosotros h1 {
@@ -515,7 +595,7 @@ footer ul {
     justify-content: end; 
     top: 18vw;
     padding: 0 !important;
-}
+} */
 /* Tablet */
 @media screen and (max-width: 1200px)  {
     section {
