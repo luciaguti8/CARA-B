@@ -23,10 +23,10 @@
     <!-- CSS AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
-    <!-- Para que funcione nuestro CSS tenemos que cargarlo despues de enlazar el link de Bootstrap -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- menu nav -->
     <nav class="navbar navbar-expand-xl my-bg-color fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">CARA-B</a>
@@ -49,6 +49,7 @@
           </div>
         </div>
     </nav>
+    <!-- intro -->
     <section id="intro">
         <h1 data-aos="fade-up">Cara-B</h1>
         <img src="media/INDEX/INTRO.jpeg" alt="MDN" />
@@ -69,13 +70,9 @@
             </h4>
         </div>
     </section>
-    <section id="issues">
-        <h1 data-aos="fade-up">Números</h1>
-
-    </section>
-
-    <!-- CARROUSEL DE EJEMPLARES; BOOTSTRAP-->
+    <!-- carrusel ejemplares; bootstrap -->
     <section id="customCarousel" class="carousel slide carousel-dark" data-bs-ride="carousel" data-bs-touch="true">
+        <h1 data-aos="fade-up">Números</h1>
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <a href="moda.html"><img src="media/CE_Carrousel/PE_Mockups/Ejemplar1.jpg" class="d-block w-100" alt="Imagen 1"></a>
@@ -94,7 +91,6 @@
                 <img src="media/CE_Carrousel/PE_Mockups/Ejemplar5.jpg" class="d-block w-100" alt="Imagen 5">
             </div>
         </div>
-
         <button class="carousel-control-prev" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -104,26 +100,10 @@
             <span class="visually-hidden">Next</span>
         </button>
     </section>
-
-    <!-- MODAL DEL CARROUSEL -->
-    <!-- <section class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img id="modalImage" src="" alt="Imagen ampliada">
-                </div>
-            </div>
-        </div>
-    </section> -->
+    <!-- footer -->
     <footer>
         <div class="container-fluid">
             <div class="row g-5 d-flex align-items-center">
-                <!-- <div class="col-md-12 d-flex justify-content-center">
-                    <h2>Cara-B</h2>
-                </div> -->
                 <div class="marquee col-12 d-flex justify-content-center">
                     <ul class="marquee__content">
                       <li><h2>Cara-B</h2></li>
@@ -132,7 +112,6 @@
                       <li><h2>Cara-B</h2></li>
                       <li><h2>Cara-B</h2></li>
                     </ul>
-                    <!-- Mirrors the content above -->
                     <ul class="marquee__content" aria-hidden="true">
                       <li><h2>Cara-B</h2></li>
                       <li><h2>Cara-B</h2></li>
@@ -174,6 +153,7 @@
             </div>
         </div>
     </footer>
+    <!-- modal footer -->
     <div id="thanks-modal" class="modal">
         <div class="modal-content">
           <i class="fa-solid fa-xmark fa-2xl close d-flex flex-wrap justify-content-end align-items-center"></i>
