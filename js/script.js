@@ -1,4 +1,7 @@
-AOS.init();
+AOS.init({
+    offset: 50,
+    anchorPlacement: 'top-bottom',
+  });
 
 $(document).ready(function(){
     // Nav
@@ -236,23 +239,29 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 // HOVER CAMERON RUSSEL
-document.querySelectorAll('.gallery-item').forEach((item) => {
-    const hoverImage = item.querySelector('.hover-image');
+function hoverCameron() {
+    if (window.innerWidth > 992) {
+        document.querySelectorAll('.gallery-item').forEach((item) => {
+            const hoverImage = item.querySelector('.hover-image');
 
-    // Evento de movimiento del ratón
-    item.addEventListener('mousemove', (event) => {
-        const { offsetX, offsetY } = event;
-        const radius = 80; // Ajusta el radio según prefieras
+            // Evento de movimiento del ratón
+            item.addEventListener('mousemove', (event) => {
+                const { offsetX, offsetY } = event;
+                const radius = 80; // Ajusta el radio según prefieras
 
-        // Cambiar el clip-path para crear el efecto de máscara
-        hoverImage.style.clipPath = `circle(${radius}px at ${offsetX}px ${offsetY}px)`;
-    });
+                // Cambiar el clip-path para crear el efecto de máscara
+                hoverImage.style.clipPath = `circle(${radius}px at ${offsetX}px ${offsetY}px)`;
+            });
 
-    // Cuando el ratón sale, ocultar la máscara
-    item.addEventListener('mouseleave', () => {
-        hoverImage.style.clipPath = 'circle(0% at 50% 50%)';
-    });
-});
+            // Cuando el ratón sale, ocultar la máscara
+            item.addEventListener('mouseleave', () => {
+                hoverImage.style.clipPath = 'circle(0% at 50% 50%)';
+            });
+        });
+    }   
+}
+hoverCameron();
+window.addEventListener('resize', hoverCameron);
 
   // CARROUSEL CASOS ARCHIVADOS
 document.addEventListener('DOMContentLoaded', function() {
