@@ -4,7 +4,6 @@
     cursor: url('../media/Cursor/cursor-default.png'), auto;
     scroll-behavior: smooth;
 }
-
 /* variables */
 :root {
     --primaryPink: #FADADE;
@@ -82,7 +81,7 @@ button {
 .swiper-button-next:hover, .swiper-button-prev:hover, .swiper-button-next:hover, .swiper-pagination-bullet:hover, button:not(:disabled):hover, .carousel-control-next, .carousel-control-prev, .carousel-control-next-icon, .carousel-control-prev-icon, .carousel-item img, .nav-link, .navbar-brand, .close, input {
     cursor: url('../media/Cursor/cursor-pointer.png'), auto !important;
 }
-
+/* menú */
 .navbar-brand {
     color: var(--black);
     font-weight: 900;
@@ -113,18 +112,19 @@ button {
     transition: transform 0.5s ease;
 }
 .hr-menu {
-    width: 100%; /* Asegura que ocupe todo el ancho posible del li */
-    margin: 0; /* Quita margen adicional */
+    width: 100%;
+    margin: 0; 
     border: solid black 1px;
     color: black;
-    min-width: 50px; /* Establece un tamaño mínimo */
+    min-width: 50px;
     opacity: 100;
 }
  nav .container-fluid {
     gap: 16px;
     padding: 0.2vw 4vw;
 }
-/* INDEX */
+/* INDEX.HTML */
+/* intro */
 section {
     padding: 4vw 16vw !important;
     background-color: var(--white);
@@ -144,8 +144,7 @@ section {
     display: flex;
     justify-content: center;
 }
-
-/* CARROUSEL EJEMPLARES CON BOOTSTRAP */
+/* ejemplares */
 .carousel-item img {
     object-fit: cover;
     cursor: pointer;
@@ -153,20 +152,8 @@ section {
     width: 100%;
     height: auto;
 }
-
 .carousel-item img:hover {
     transform: scale(1.05);
-}
-
-.modal-content {
-    border-radius: 0; 
-    height: 100%;
-}
-
-.modal img {
-    width: 100%;
-    /* max-height: 80vh; */
-    object-fit: contain;
 }
 #customCarousel .carousel-control-next {
     justify-content: start; 
@@ -177,8 +164,7 @@ section {
     color: var(--black);
     padding: 0 !important;
 }
-
-/* FOOTER  */
+/* footer*/
 footer {
     background-color: var(--primaryRed);
     padding: 2vw 0vw !important;
@@ -223,8 +209,6 @@ footer button:hover {
 footer h3, footer p, footer .fa-brands{
     color: var(--white);
 }
-
-/* marquee */
 footer h2 {
     color: var(--primaryPink);
 }
@@ -238,16 +222,16 @@ footer ul {
     overflow: hidden;
     user-select: none;
     gap: var(--gap);
-  }
-  .marquee__content {
+}
+.marquee__content {
     animation: scroll 8s linear infinite;
     flex-shrink: 0;
     display: flex;
     justify-content: space-around;
     min-width: 100%;
     gap: var(--gap);
-  }
-  .marquee__content:nth-child(2){
+}
+.marquee__content:nth-child(2){
     margin-right: -100%; 
   }
   @keyframes scroll {
@@ -257,9 +241,8 @@ footer ul {
     to {
       transform: translateX(calc(-100% - var(--gap)));
     }
-  }
-
-  #thanks-modal {
+}
+#thanks-modal {
     display: none; 
     position: fixed; 
     z-index: 11; 
@@ -275,13 +258,11 @@ footer ul {
     background-color: var(--white);
     margin: auto;
     width: 50%;
-    /* padding: 1.8vw; */
     border: var(--red) solid 0.14vw;
     border-radius: 12px;
     height: auto;
     top: 20%;
     display: flex;
-    /* justify-content: space-evenly */
 }
 .modal-content i {
     font-size: 2vw;
@@ -309,15 +290,15 @@ footer ul {
     justify-content: center ;
     padding: 0px 24px;
 }
-
-/* INTRO MODA */
+/*MODA.HTML*/
+/*intro moda*/
 #intro-moda img {
     aspect-ratio: 16/9;
     width: 100%;
     object-fit: cover;
     padding-bottom: 4vw;
 }
-/* CARROUSEL MODELOS*/
+/*archivo*/
 #modelos {
     background-color: var(--black);
 }
@@ -337,8 +318,6 @@ footer ul {
     margin-bottom: 30px;
 }
 .swiper-slide img {
-    /* width: 100%;
-    height: auto; */
     aspect-ratio: 4/3;
     object-fit: cover;
 }
@@ -362,11 +341,7 @@ footer ul {
 #modelos .container {
     --bs-gutter-x: 0;
 }
-/* .swiper-slide {
-    aspect-ratio: 4/3;
-} */
-
-/* GALERÍA CAMERON RUSSEL  */
+/*entrevistas*/
 .gallery-item {
     position: relative;
     overflow: hidden;
@@ -396,32 +371,26 @@ footer ul {
     justify-content: center;
     height: 100%;
 }
-
-
-/* CARROUSEL CARDS */
+/*casos*/
 #historicos {
     background-color: var(--primaryPink);
 }
-
 .swiper-slide {
     display: flex;
     justify-content: center;
 }
-
 .swiper-slide .card {
     width: 100%;
     max-width: 34vw; 
     border-radius: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 .swiper-slide img {
     width: 100%;
     height: auto;
     border-radius: 0;
 }
-
-/* GALERÍA MALTRATADORES BOOTSTRAP */
+/*estadisticas*/
 #maltratadores p {
     text-align: justify;
     padding-bottom: 2vw;
@@ -434,13 +403,60 @@ footer ul {
     object-fit: cover; 
     border-radius: 0; 
 }
-
 .caption {
     text-align: center;
     font-weight: bold;
     margin-top: 8px;
 }
-/* POSTER */
+/*vosotros*/
+#vosotros {
+    background-color: var(--black);
+}
+#vosotros h1 {
+    color: var(--white);
+}
+.card-anonimo {
+    background: var(--white);
+    border: 2px solid var(--black);
+    padding: 2vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 2vw;
+    min-height: 52vh;
+}
+.card-img-anonimo p {
+    font-size: 1.2vw;
+    text-align: center;
+    font-style: italic;
+    line-height: 1.8vw;
+}
+.card-img-anonimo {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card-img-anonimo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    aspect-ratio: 3/4;
+    margin-bottom: 1vw;
+}
+.card-info-anonimo {
+    text-align: center;
+    width: 50%;
+}
+.card-info-anonimo p {
+    color: var(--darkGrey);
+    margin-bottom: 0;
+}
+/*poster*/
 #canvas-container {
     width: 100%;
     height: 85vh;
@@ -470,134 +486,7 @@ footer ul {
     background-color: var(--lightGrey);
     color: var(--white);
 }
-/* CARROUSEL ANONIMOS 2 */
-#vosotros {
-    background-color: var(--black);
-}
-#vosotros h1 {
-    color: var(--white);
-}
-.card-anonimo {
-    background: var(--white);
-    border: 2px solid var(--black);
-    padding: 2vw;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    gap: 2vw;
-    min-height: 52vh;
-}
-
-/* Estilos para la imagen */
-.card-img-anonimo p {
-    font-size: 1.2vw;
-    text-align: center;
-    font-style: italic;
-    line-height: 1.8vw;
-}
-.card-img-anonimo {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.card-img-anonimo img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-    aspect-ratio: 3/4;
-    margin-bottom: 1vw;
-}
-
-.card-info-anonimo {
-    text-align: center;
-    width: 50%;
-}
-
-.card-info-anonimo p {
-    color: var(--darkGrey);
-    margin-bottom: 0;
-}
-
-/* .card-anonimo {
-    background: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    display: flex;
-    flex-direction: row;
-    min-width: 50%;
-    margin: 0 10px;
-}
-
-.card-img-anonimo img {
-    width: 50%;
-    height: auto;
-    object-fit: cover;
-    padding-right: 16px;
-}
-
-.card-img-anonimo {
-    width: 50%;
-}
-
-.card-info-anonimo {
-    width: 50%;
-} */
-/* #vosotros {
-    background-color: var(--black);
-}
-#vosotros h1 {
-    color: var(--white);
-}
-#vosotros p {
-    padding-left: 1vw;
-}
-#vosotros .carousel-inner {
-    height: 450px;
-    display: flex;
-    align-items: center;
-}
-.profile-image {
-    width: 100px;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 0;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.profile-card {
-    width: 48%;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    border-radius: 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: var(--white);
-}
-
-.profile-info {
-    width: 40%;
-    text-align: center;
-}
-
-.profile-quote {
-    width: 60%;
-}
-#vosotros .carousel-control-next {
-    justify-content: start; 
-    top: 18vw;
-    padding: 0 !important;
-}
-#vosotros .carousel-control-prev {
-    justify-content: end; 
-    top: 18vw;
-    padding: 0 !important;
-} */
+/* RESPONSIVE */
 /* Tablet */
 @media screen and (max-width: 1200px)  {
     section {
@@ -652,6 +541,7 @@ footer ul {
         height: 5vw;
     }
 }
+/* MOVIL  */
 @media screen and (max-width: 756px)  { 
     h1 {
         font-size: 10vw;
